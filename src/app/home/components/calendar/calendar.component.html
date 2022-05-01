@@ -1,0 +1,25 @@
+<ion-content>
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>
+        Calendar
+      </ion-title>
+    </ion-toolbar>
+    <ion-toolbar>
+      <ion-segment [(ngModel)]="selectedMode" scrollable>
+        <ion-segment-button [value]="mode" *ngFor="let mode of modes">
+          <ion-label>{{ mode }}</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [presentation]="selectedMode">
+
+  <ion-datetime>
+
+  </ion-datetime>
+
+
+  </ion-content>
+</ion-content>

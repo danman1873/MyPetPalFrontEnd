@@ -1,0 +1,7 @@
+{
+  "name": "MyPetPal",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

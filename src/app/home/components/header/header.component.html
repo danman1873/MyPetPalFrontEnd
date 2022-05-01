@@ -1,0 +1,38 @@
+<ion-header class="ion-container ion-no-border">
+  <ion-toolbar >
+    <div class="toolbar-wrapper">
+      <ion-buttons slot="start" class="ion-no-padding">
+        <ion-button style="cursor: pointer" [routerLink]="['/home']">
+          <ion-icon color= "primary" class="mypetpal-logo" name="paw-outline" ></ion-icon>
+        </ion-button>                       
+      </ion-buttons>
+    
+      <ion-grid>
+        <ion-row class="ion-justify-content-end">
+          <ion-col style="cursor: pointer" [routerLink]="['/home']" size="auto">
+            <ion-icon name="home"></ion-icon>
+            <div>Home</div>
+          </ion-col>
+          <ion-col style="cursor: pointer" [routerLink]="['/home/CreateProfile']" size="auto">
+            <ion-icon name="clipboard-outline"></ion-icon>
+            <div>Create another profile</div>
+          </ion-col>
+          <ion-col style="cursor: pointer" [routerLink]="['/home/EditPet']" size="auto">
+            <ion-icon name="pencil-outline"></ion-icon>
+            <div>Edit Pets</div>
+          </ion-col>
+          <ion-col style="cursor: pointer" [routerLink]="['/home/AddAppointment']" size="auto">
+            <ion-icon name="calendar-outline"></ion-icon>
+            <div>Add Appointment</div>
+          </ion-col>
+          <ion-col style="cursor: pointer" (click)="presentPopover($event)" size="auto">
+            <ion-icon name="person-outline"></ion-icon>
+            <div style="display: flex; justify-content: center; align-items: center">Account
+              <ion-icon style="font-size: 16px" name="caret-down-outline"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid> 
+    </div>
+  </ion-toolbar>
+</ion-header>

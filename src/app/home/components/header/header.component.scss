@@ -1,0 +1,29 @@
+.toolbar-wrapper {
+    display: flex;
+    max-width: 1128px;
+    margin: auto;
+}
+
+.mypetpal-logo {
+    font-size: 40px;
+    margin-left: 20px;
+
+}
+
+ion-col div{
+    font-size: 12px;
+    font-weight: 400;
+}
+
+ion-icon {
+    font-size: 36px;
+}
+
+ion-col {
+    width: 130px !important;
+    text-align: center;
+}
+
+ion-header {
+    border-bottom: 1px solid var(--ion-color-light-tint);
+}

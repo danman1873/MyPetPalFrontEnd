@@ -1,0 +1,35 @@
+<ion-content>
+  <ion-card   *ngFor="let pet of allLoadedPets">
+    <ion-grid>
+      <ion-row class="ion-align-self-center">
+        <ion-col>
+          <p>Name</p>
+          <h2>{{ pet.name }}</h2>
+        </ion-col>
+
+        <ion-col>
+          <p>Weight</p>
+          <h2>{{ pet.weight }}</h2>
+        </ion-col>
+
+        <ion-col>
+          <p>Type</p>
+          <h2>{{ pet.type }}</h2>
+        </ion-col>
+
+        <ion-col>
+          <p>Feeding Time</p>
+          <h2>{{ pet.feedingTime }}</h2>
+        </ion-col>
+      </ion-row>
+      <ion-col *ngIf="(userId$ | async) === pet.author.id" class="ion-text-right">
+        <ion-icon
+         (click)="presentUpdateModal(pet.id)"
+        style="font-size: 18px; cursor: pointer" color="dark" name="create-outline"></ion-icon>
+        <ion-icon 
+        (click)="deletePet(pet.id)"
+        style="font-size: 18px; cursor: pointer" color="danager" name="trash-outline"></ion-icon>
+      </ion-col>
+    </ion-grid>
+  </ion-card>
+</ion-content>

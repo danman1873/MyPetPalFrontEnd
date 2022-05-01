@@ -1,0 +1,28 @@
+<div>
+  <div class="heading ion-padding">
+    <ion-text>{{ petId ? "Edit" : "Create" }} a Pet</ion-text>
+    <ion-button (click)="onDismiss()" size="small" color="dark" fill="clear" shape="round">
+      <ion-icon slot="icon-only" size="large" name="close-outline"></ion-icon>
+    </ion-button>
+  </div>
+  <div class="item-divider"></div>
+  <ion-grid class="ion-padding">
+  </ion-grid>
+  <form #form="ngForm" (ngSubmit)="onPost()" class="ion-padding">
+    <ion-item>
+      <ion-textarea placeholder="Enter pet name" position="stacked" type="text" ngModel name="name" required></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea placeholder="Enter pet weight" position="stacked" type="text" ngModel name="weight" required></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea placeholder="Enter pet type" position="stacked" type="text" ngModel name="type" required></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea placeholder="Enter pet feeding time" position="stacked" type="text" ngModel name="feedingTime" required></ion-textarea>
+    </ion-item>
+    <ion-button [disabled]="!form.valid" type="submit" class="ion-margin">
+      {{ petId ? "Edit" : "Create" }} Confirm
+    </ion-button>
+  </form>
+</div>

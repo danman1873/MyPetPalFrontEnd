@@ -1,0 +1,25 @@
+<div>
+  <div class="heading ion-padding">
+    <ion-text>{{ appointmentId ? "Edit" : "Create" }} an Appointment</ion-text>
+    <ion-button (click)="onDismiss()" size="small" color="dark" fill="clear" shape="round">
+      <ion-icon slot="icon-only" size="large" name="close-outline"></ion-icon>
+    </ion-button>
+  </div>
+  <div class="item-divider"></div>
+  <ion-grid class="ion-padding">
+  </ion-grid>
+  <form #form="ngForm" (ngSubmit)="onSubmit()" class="ion-padding">
+    <ion-item>
+      <ion-textarea placeholder="Enter appointment date" position="stacked" type="text" ngModel name="date" required></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea placeholder="Enter description" position="stacked" type="text" ngModel name="description" required></ion-textarea>
+    </ion-item>
+    <ion-item>
+      <ion-textarea placeholder="Enter pet name" position="stacked" type="text" ngModel name="petName" required></ion-textarea>
+    </ion-item>
+    <ion-button [disabled]="!form.valid" type="submit" class="ion-margin">
+      {{ appointmentId ? "Edit" : "Create" }} Confirm
+    </ion-button>
+  </form>
+</div>
